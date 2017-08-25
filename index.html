@@ -23,14 +23,18 @@
           </select>
         </div>
         <div class="col-md-6">
-          <label for="size">Choose Toppings:</label>
-          <select id="size" class="form group">
-            <option id="pickles">Pickles</option>
-            <option id="sardines">Sardines</option>
-            <option id="lettuce">Lettuce</option>
-          </select>
+          <div id="showOrder">
+            <p>Size: <span id="showSize"></span></p>
+            <p>Toppings: <span id="showToppings"></span></p>
+          </div>
         </div>
       </div>
+      <label for="toppings">Choose your pizza:</label>
+      <select id="toppings" class="form group">
+        <option id="sardPick">Sardines and Pickles</option>
+        <option id="lettNut">Lettuce and Pinenuts</option>
+        <option id="bacEgg">Bacon and Eggs</option>
+      </select>
     </div>
   </body>
 </html>

@@ -12,3 +12,10 @@ h1 {
   color: red;
   font-family: cursive;
 }
+p {
+  color: #efbe0b;
+  font-size: 30px;
+}
+#showOrder {
+  display: none;
+}
