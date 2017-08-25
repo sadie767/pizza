@@ -4,12 +4,29 @@ function Pizza (size, toppings, number) {
   this.toppings = toppings;
   this.number = number;
 }
-// function Toppings (pickles, sardines, lettuce) {
-//   this.pickles = pickles;
-//   this.sardine = sardines;
-//   this.lettuce = lettuce;
-// }
 
+Pizza.prototype.price = function() {
+  if (this.size === 5 && this.toppings === 9) {
+    return mediumPrice;
+    } else if(this.size === 5 && this.toppings === 10 && this.toppings === 8) {
+      return mediumPrice2;
+    } else if(this.size === 6 && this.toppings === 9) {
+      return largePrice1;
+    } else if(this.size === 6 && this.toppings === 10 && this.toppings === 8) {
+      return largePrice2;
+    } else if(this.size === 7 && this.toppings === 9) {
+      return xxlPrice1;
+    } else if(this.size === 6 && this.toppings === 10 && this.toppings === 8) {
+      return xxlPrice2;
+    }
+};
+
+var mediumPrice1 = 13;
+var mediumPrice2 = 14;
+var largePrice1 = 15;
+var largePrice2 = 16;
+var xxlPrice1 = 19;
+var xxlPrice2 = 20;
 //user-interface logic$
 $(document).ready(function() {
   $("#form").submit(function(event) {
@@ -21,8 +38,6 @@ $(document).ready(function() {
     var sendObject = new Pizza(chooseSize, chooseToppings, chooseNumber);
 
   $("#showOrder").show();
-  $("#showSize").text(sendObject.size);
-  $("#showToppings").text(sendObject.toppings);
-  $("#showNumber").text(sendObject.number);
+  $("#form").text(sendObject.price());
   });
 });
