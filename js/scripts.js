@@ -5,19 +5,19 @@ function Pizza (size, toppings, number) {
   this.number = number;
 }
 
-Pizza.prototype.price = function() {
-  if (this.size === 5 && this.toppings === 9) {
-    return mediumPrice;
-    } else if(this.size === 5 && this.toppings === 10 && this.toppings === 8) {
-      return mediumPrice2;
-    } else if(this.size === 6 && this.toppings === 9) {
-      return largePrice1;
-    } else if(this.size === 6 && this.toppings === 10 && this.toppings === 8) {
-      return largePrice2;
-    } else if(this.size === 7 && this.toppings === 9) {
-      return xxlPrice1;
-    } else if(this.size === 6 && this.toppings === 10 && this.toppings === 8) {
-      return xxlPrice2;
+Pizza.prototype.Price = function() {
+  if (this.size === "5" && this.toppings === "9") {
+    return mediumPrice1;
+  } else if(this.size === "5" && this.toppings === "10" || this.toppings === "8") {
+      return mediumPrice2 = "$14.00";
+    } else if(this.size === "6" && this.toppings === "9") {
+      return largePrice1 = "$15.00";
+    } else if(this.size === "6" && this.toppings === "10" || this.toppings === "8") {
+      return largePrice2 = "$16.00";
+    } else if(this.size === "7" && this.toppings === "9") {
+      return xxlPrice1 = "$19.00";
+    } else if(this.size === "7" && this.toppings === "10" || this.toppings === "8") {
+      return xxlPrice2 = "$20.00";
     }
 };
 
@@ -36,8 +36,8 @@ $(document).ready(function() {
     var chooseNumber = $("#number").val();
 
     var sendObject = new Pizza(chooseSize, chooseToppings, chooseNumber);
-
+    //alert(sendObject.Price());
   $("#showOrder").show();
-  $("#form").text(sendObject.price());
+  $("#showOrder ").text(sendObject.Price());
   });
 });
