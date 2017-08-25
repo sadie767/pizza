@@ -16,6 +16,9 @@ p {
   color: #efbe0b;
   font-size: 30px;
 }
+#number, #toppings, button {
+  margin-top: 50px;
+}
 #showOrder {
   display: none;
 }

@@ -13,28 +13,46 @@
       <img src="https://s-media-cache-ak0.pinimg.com/736x/b2/76/af/b276af58ff041b951321765eec87ce29--pizza-cartoon-pizza-wallpaper.jpg">
       <h1><span id="totinos">Totinos:</span> best pizza in the galaxy</h1>
       <p>Order your pizza:</p>
-      <div class="row">
-        <div class="col-md-6">
-          <label for="size">Choose size:</label>
-          <select id="size" class="form group">
-            <option id="medium">Medium-10"</option>
-            <option id="large">Large-14"</option>
-            <option id="xxl">XXL-16"</option>
-          </select>
-        </div>
-        <div class="col-md-6">
-          <div id="showOrder">
-            <p>Size: <span id="showSize"></span></p>
-            <p>Toppings: <span id="showToppings"></span></p>
+          <div class="row">
+            <div class="col-md-6">
+              <form id="form">
+                <div class="pizzaForm">
+                <label for="size">Choose size:</label>
+                <select id="size" class="form group">
+                  <option value="Medium">Medium-10"</option>
+                  <option value="Large">Large-14"</option>
+                  <option value="XXL">XXL-16"</option>
+                </select>
+              </div>
+              <div class="pizzaForm">
+                <label for="toppings">Choose your pizza:</label>
+                <select id="toppings" class="form group">
+                  <option value="Sardines and Pickles">Sardines and Pickles</option>
+                  <option value="Lettuce and Pinenuts">Lettuce and Pinenuts</option>
+                  <option value="Bacon and Eggs">Bacon and Eggs</option>
+                </select>
+              </div>
+              <div class="pizzaForm">
+                <label for="number">How many?</label>
+                <select id="number" class="form group">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+              <button type="submit">Order</button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <div id="showOrder">
+              <h1>Your Order:</h1>
+              <p>Size: <span id="showSize"></span></p>
+              <p>Toppings: <span id="showToppings"></span></p>
+              <p>How many: <span id="showNumber"></span></p>
+            </div>
           </div>
         </div>
-      </div>
-      <label for="toppings">Choose your pizza:</label>
-      <select id="toppings" class="form group">
-        <option id="sardPick">Sardines and Pickles</option>
-        <option id="lettNut">Lettuce and Pinenuts</option>
-        <option id="bacEgg">Bacon and Eggs</option>
-      </select>
-    </div>
+  </div>
   </body>
 </html>
