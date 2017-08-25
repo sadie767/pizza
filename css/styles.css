@@ -2,6 +2,8 @@ img {
   width: 150px;
   height: auto;
   float: right;
+  margin: 50px;
+  border: 5px solid red;
 }
 #totinos {
   color: red;
@@ -13,7 +15,7 @@ h1 {
   font-family: cursive;
 }
 p {
-  color: #efbe0b;
+  color: red;
   font-size: 30px;
 }
 #number, #toppings, button {
@@ -21,4 +23,11 @@ p {
 }
 #showOrder {
   display: none;
+}
+
+body {
+  background-color: #efbe0b;
+}
+h2 {
+  color: red;
 }
