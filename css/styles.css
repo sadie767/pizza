@@ -21,7 +21,7 @@ p {
 #number, #toppings, button {
   margin-top: 50px;
 }
-#showOrder, #finalCost {
+#showOrder, #finalCost, #formAddress {
   display: none;
 }
 

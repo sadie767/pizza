@@ -39,7 +39,7 @@ var sendObject;
 
 //user-interface logic$
 $(document).ready(function() {
-  $("#form").submit(function(event) {
+  $("#formPizza").submit(function(event) {
     event.preventDefault();
     var chooseSize = $("#size").val();
     var chooseToppings = $("#toppings").val();
@@ -53,4 +53,13 @@ $(document).ready(function() {
     $("#finalCost").show();
     $("#finalCost").text(sendObject.MyPrice());
   });
+});
+  $("#formDelivery").submit(function(event) {
+    event.preventDefault();
+    var enterName = $("#name").val;
+    var enterAddress = $("#address").val;
+
+    $("formAddress").show();
+    $("showName").show(enterName);
+    $("showAdress").show(enterAddress);
 });
