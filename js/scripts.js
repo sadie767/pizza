@@ -20,6 +20,12 @@ Pizza.prototype.Price = function() {
     }
 };
 
+Pizza.prototype.MyPrice = function() {
+  if (sendObject>1) {
+  return multiples = sendObject + sendObject;
+  }
+}
+
 var mediumPrice1 = 13;
 var mediumPrice2 = 14;
 var largePrice1 = 15;
@@ -27,6 +33,10 @@ var largePrice2 = 16;
 var xxlPrice1 = 19;
 var xxlPrice2 = 20;
 var multiples;
+var finalPrice;
+var parse;
+var sendObject;
+
 //user-interface logic$
 $(document).ready(function() {
   $("#form").submit(function(event) {
@@ -34,9 +44,13 @@ $(document).ready(function() {
     var chooseSize = $("#size").val();
     var chooseToppings = $("#toppings").val();
 
-    var sendObject = new Pizza(chooseSize, chooseToppings);
+    sendObject = new Pizza(chooseSize, chooseToppings);
     multiples = sendObject.Price();
-    $("#showOrder").append("$" + multiples + ".00");
+    parse = parseInt(sendObject);
     $("#showOrder").show();
+    $("#showOrder").append("<li>" + "$" + multiples + ".00" + "</li>");
+    finalPrice = sendObject.MyPrice();
+    $("#finalCost").show();
+    $("#finalCost").text(sendObject.MyPrice());
   });
 });

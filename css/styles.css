@@ -3,7 +3,7 @@ img {
   height: auto;
   float: right;
   margin: 50px;
-  border: 5px solid red;
+  /*border: 5px solid red;*/
 }
 #totinos {
   color: red;
@@ -21,7 +21,7 @@ p {
 #number, #toppings, button {
   margin-top: 50px;
 }
-#showOrder {
+#showOrder, #finalCost {
   display: none;
 }
 
@@ -30,4 +30,8 @@ body {
 }
 h2 {
   color: red;
+}
+.jumbotron {
+  border: 5px solid red;
+  background-color: #ffffff;
 }
