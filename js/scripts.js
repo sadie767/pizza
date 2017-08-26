@@ -5,10 +5,6 @@ function Pizza (size, toppings) {
 }
 
 Pizza.prototype.Price = function() {
-  var priceArrays = [];
-  function add(a, b) {
-    return a + b;
-  }
   alert(priceArrays);
   if (this.size === "5" && this.toppings === "9") {
       priceArrays.push(13);
@@ -29,11 +25,17 @@ Pizza.prototype.Price = function() {
       priceArrays.push(20);
       return priceArrays;
     }
-    priceArrays.reduce(add, 0);
 };
 
 var multiples;
 var sendObject;
+var priceArrays = [];
+
+parseInt(priceArrays);
+function add(a, b) {
+  return a + b;
+}
+priceArrays.reduce(add, 0);
 
 //user-interface logic$
 $(document).ready(function() {
@@ -46,15 +48,15 @@ $(document).ready(function() {
     multiples = sendObject.Price();
 
     $("#showOrder").show();
-    $("#showOrder").append("<li>" + "$" + multiples + ".00" + "</li>");
+    $("#showOrder").text("$" + multiples + ".00");
   });
 });
-  $("#formDelivery").submit(function(event) {
-    event.preventDefault();
-    var enterName = $("#name").val;
-    var enterAddress = $("#address").val;
-
-    $("formAddress").show();
-    $("showName").show(enterName);
-    $("showAdress").show(enterAddress);
-});
+//   $("#formDelivery").submit(function(event) {
+//     event.preventDefault();
+//     var enterName = $("#name").val;
+//     var enterAddress = $("#address").val;
+//
+//     $("formAddress").show();
+//     $("showName").show(enterName);
+//     $("showAdress").show(enterAddress);
+// });
