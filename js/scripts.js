@@ -5,36 +5,34 @@ function Pizza (size, toppings) {
 }
 
 Pizza.prototype.Price = function() {
+  var priceArrays = [];
+  function add(a, b) {
+    return a + b;
+  }
+  alert(priceArrays);
   if (this.size === "5" && this.toppings === "9") {
-      return mediumPrice1 = 13;
+      priceArrays.push(13);
+      return priceArrays;
     } else if(this.size === "5" && this.toppings === "10" || this.toppings === "8") {
-      return mediumPrice2 = 14;
+      priceArrays.push(14);
+      return priceArrays;
     } else if(this.size === "6" && this.toppings === "9") {
-      return largePrice1 = 15;
+      priceArrays.push(15);
+      return priceArrays;
     } else if(this.size === "6" && this.toppings === "10" || this.toppings === "8") {
-      return largePrice2 = 16;
+      priceArrays.push(16);
+      return priceArrays;
     } else if(this.size === "7" && this.toppings === "9") {
-      return xxlPrice1 = 19;
+      priceArrays.push(19);
+      return priceArrays;
     } else if(this.size === "7" && this.toppings === "10" || this.toppings === "8") {
-      return xxlPrice2 = 20;
+      priceArrays.push(20);
+      return priceArrays;
     }
+    priceArrays.reduce(add, 0);
 };
 
-Pizza.prototype.MyPrice = function() {
-  if (sendObject>1) {
-  return multiples = sendObject + sendObject;
-  }
-}
-
-var mediumPrice1 = 13;
-var mediumPrice2 = 14;
-var largePrice1 = 15;
-var largePrice2 = 16;
-var xxlPrice1 = 19;
-var xxlPrice2 = 20;
 var multiples;
-var finalPrice;
-var parse;
 var sendObject;
 
 //user-interface logic$
@@ -46,12 +44,9 @@ $(document).ready(function() {
 
     sendObject = new Pizza(chooseSize, chooseToppings);
     multiples = sendObject.Price();
-    parse = parseInt(sendObject);
+
     $("#showOrder").show();
     $("#showOrder").append("<li>" + "$" + multiples + ".00" + "</li>");
-    finalPrice = sendObject.MyPrice();
-    $("#finalCost").show();
-    $("#finalCost").text(sendObject.MyPrice());
   });
 });
   $("#formDelivery").submit(function(event) {
