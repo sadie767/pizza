@@ -8,7 +8,7 @@
 
 _{This program will:}_
 * _take values of pizza size and toppings from customer and return price. input:Medium and mushroom output:$14.00_
-* _take values of multiple orders from customers and display price. input:2 mediums output:$28.00_
+* _take values of multiple orders from customers and return price. input:2 mediums output:$28.00_
 ## Setup/Installation Requirements
 
 * _open github and copy the project's url_
